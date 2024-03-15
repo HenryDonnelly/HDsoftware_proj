@@ -12,6 +12,11 @@ class Supplier extends Model
         'name',
         'phone_no',
         'address',
-        
+
     ];
+
+    public function rewards()
+    {
+        return $this->hasMany(Reward::class);
+    }
 }
