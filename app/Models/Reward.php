@@ -5,6 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use App\Models\Supplier;
+use App\Models\User;
 
 class Reward extends Model
 {
@@ -19,5 +20,9 @@ class Reward extends Model
     public function supplier()
     {
         return $this->belongsTo(Supplier::class);
+    }
+
+    public function users(){
+        return $this->belongsToMany(User::class)->withTimestamps();
     }
 }
