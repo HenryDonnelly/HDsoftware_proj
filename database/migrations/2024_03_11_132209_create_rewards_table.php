@@ -11,23 +11,26 @@ return new class extends Migration
      */
     public function up(): void
     {
-        if (!Schema::hasTable('rewards')) {
         Schema::create('rewards', function (Blueprint $table) {
             $table->id();
             $table->string('title');
             $table->string('description');
             $table->string('reward_image')->nullable();
+            $table->unsignedBigInteger('supplier_id'); // Add supplier_id column
             $table->foreign('supplier_id')->references('id')->on('suppliers')->onDelete('cascade');
             $table->timestamps();
         });
     }
-}
 
     /**
      * Reverse the migrations.
      */
     public function down(): void
     {
+        Schema::disableForeignKeyConstraints(); // Disable foreign key checks
+
         Schema::dropIfExists('rewards');
+
+        Schema::enableForeignKeyConstraints(); // Re-enable foreign key checks
     }
 };

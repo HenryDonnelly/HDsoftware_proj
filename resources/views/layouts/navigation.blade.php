@@ -21,6 +21,11 @@
                         {{ __('All Tasks') }}
                     </x-nav-link>
                 </div>
+                <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
+                    <x-nav-link :href="route('rewards.index')" :active="request()->routeIs('rewards.index')">
+                        {{ __('All Rewards') }}
+                    </x-nav-link>
+                </div>
 
         </div>
 
