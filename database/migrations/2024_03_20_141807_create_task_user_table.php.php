@@ -28,7 +28,11 @@ return new class extends Migration
      * Reverse the migrations.
      */
     public function down(): void
-    {
-        //
-    }
+{
+    Schema::table('task_user', function (Blueprint $table) {
+        $table->dropForeign(['task_id']);
+    });
+
+    Schema::dropIfExists('tasks');
+}
 };

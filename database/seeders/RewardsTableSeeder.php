@@ -79,7 +79,7 @@ class RewardsTableSeeder extends Seeder
         $r10 = new Reward();
         $r10->title = 'Hermes Birkin Handbag';
         $r10->description = 'Iconic Hermes Birkin handbag crafted from premium leather with exquisite craftsmanship.';
-        $r10->reward_image = 'rewards/nike-1-min.jpg';
+        $r10->reward_image = 'storage/app/public/rewards/nike-1-min.jpg';
         $r10->supplier_id = 1;
         $r10->save();
     }

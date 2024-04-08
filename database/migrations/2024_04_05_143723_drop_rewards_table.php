@@ -12,11 +12,7 @@ class DropRewardsTable extends Migration
      */
     public function up()
     {
-        Schema::table('reward_user', function ($table) {
-            $table->dropForeign('reward_user_reward_id_foreign');
-        });
 
-        Schema::dropIfExists('rewards');
     }
 
     /**
@@ -26,6 +22,6 @@ class DropRewardsTable extends Migration
      */
     public function down()
     {
-        // This is a drop migration, so there's no need to define the "down" method.
+       
     }
 }

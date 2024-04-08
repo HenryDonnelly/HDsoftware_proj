@@ -1,70 +1,35 @@
-@extends('layouts.app')
-
-@section('content')
-<div class='container'>
-    <h1>all rewards</h1>
-    <table class="table">
-        <thead>
-            <tr>
-                <th>title</th>
-                <th>description</th>
-                <th>image</th>
-                <th>supplier</th>
-            </tr>
-        </thead>
-        <tbody>
-            @foreach($rewards as $rewards)
-            <tr>
-                <td>
-                <h2 class="font-bold text-2xl">
-                    <a href="{{ route('rewards.show', $rewards) }}">{{ $rewards->title }}</a>
-                </h2>
-            </td>
-                <td>{{$rewards->description}}</td>
-                <td>{{$rewards->reward_image}}</td>
-                <td>{{$rewards->supplier_id}}</td>
-            </tr>
-            @endforeach <!-- Add this line to close the foreach loop -->
-        </tbody>
-    </table>
-</div>
-@endsection
-
-
-
-{{-- <x-app-layout>
+<x-app-layout>
     <x-slot name="header">
-        <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            {{ __('All restaurants') }}
-        </h2>
+        <h1 class="font-semibold text-xl text-gray-800 leading-tight">
+            All Tasks
+        </h1>
     </x-slot>
 
 
-    <div class="py-12">
-        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-
-            <x-primary-button><a href="{{ route('admin.restaurants.create') }}" class="btn-link btn-lg mb-2">Add a restaurant</a></x-primary-button>
-            @forelse ($restaurants as $restaurant)
-                <div class="my-6 p-6 bg-white border-b border-gray-200 shadow-sm sm:rounded-lg">
-                    <h2 class="font-bold text-2xl">
-                        <a href="{{ route('admin.restaurants.show', $restaurant) }}">{{ $restaurant->name }}</a>
-                    </h2>
-                    <p class="mt-2">
-
-                        <h3 class="font-bold text-1xl"><strong>Restaurant name</strong>
-                            {{ $restaurant->name }} </h3>
-                        {{ $restaurant->address }}
-                        {{ $restaurant->bio }}
-
-                    </p>
-
-                </div>
-            @empty
-                <p>No restaurants</p>
-            @endforelse
-
+        <div class="container">
+            <h1>all Rewards</h1>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Title</th>
+                        <th>Description</th>
+                        <th>Image</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach($rewards as $reward)
+                    <tr>
+                        <td>
+                        <h2 class="font-bold text-2xl">
+                            <a href="{{ route('rewards.show', $reward) }}">{{ $reward->title }}</a>
+                        </h2>
+                    </td>
+                        <td>{{$reward->description}}</td>
+                        <td><img src="{{ asset($reward->reward_image) }}"></img></td>
+                    </tr>
+                    @endforeach
+                </tbody>
+            </table>
         </div>
-    </div>
 
-
-</x-app-layout> --}}
+</x-app-layout>
