@@ -16,6 +16,7 @@ return new class extends Migration
             $table->string('title');
             $table->string('description');
             $table->string('reward_image')->nullable();
+            $table->string('coins'); // wasnt here when i ran migrations
            // $table->unsignedBigInteger('supplier_id'); // Add supplier_id column
             // $table->foreign('supplier_id')->references('id')->on('suppliers')->onDelete('cascade');
             $table->timestamps();

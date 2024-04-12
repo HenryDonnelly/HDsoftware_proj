@@ -14,6 +14,7 @@ class Reward extends Model
         'title',
         'description',
         'reward_image',
+        'coins',
 
     ];
 
