@@ -6,8 +6,7 @@
     </x-slot>
 
 
-        <div class="container">
-            <h1>all Rewards</h1>
+        <div class="container flex justify-center" style="background: linear-gradient(to bottom, rgb(188, 227, 220), rgb(88, 121, 115));">
             <table class="table">
                 <thead>
                     <tr>
@@ -25,7 +24,7 @@
                         </h2>
                     </td>
                         <td>{{$reward->description}}</td>
-                        <td><img src="{{ asset($reward->reward_image) }}"></img></td>
+                        <td><img src="{{ asset($reward->reward_image) }}" style="width: 300px;" /></img></td>
                     </tr>
                     @endforeach
                 </tbody>

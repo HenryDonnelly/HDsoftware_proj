@@ -6,8 +6,7 @@
     </x-slot>
 
 
-        <div class="container">
-            <h1>all Tasks</h1>
+        <div class="container flex justify-center">
             <table class="table">
                 <thead>
                     <tr>

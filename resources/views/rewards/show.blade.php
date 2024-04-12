@@ -46,10 +46,7 @@
                     <td><strong>description</strong></td>
                     <td>{{$reward->description}}</td>
                 </tr>
-                <tr>
-                    <td><strong>reward_image</strong></td>
-                    <td>{{$reward->reward_image}}</td>
-                </tr>
+
                 <tr>
                     <td><strong>supplier_id</strong></td>
                     <td>{{$reward->supplier_id}}</td>
