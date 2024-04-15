@@ -30,12 +30,12 @@
 <x-app-layout>
     <x-slot name="header">
         <h1 class="font-semibold text-xl text-gray-800 leading-tight">
-            View Tasks
+            View Reward
         </h1>
     </x-slot>
 
 
-    <div class='container'>
+    <div class='container flex justify-center'>
         <table class="table table-hover">
             <tbody>
                 <tr>

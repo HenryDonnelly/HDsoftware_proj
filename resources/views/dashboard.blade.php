@@ -28,7 +28,9 @@
             <h1 class="" style="font-size: 2vw; padding: 2vw;"> Your Balance </h1>
         </div>
         <div class="text-center" style="padding-bottom: 10px;">
-            <h1 class="" style="font-size: 2vw; padding: 2vw;"> 42 </h1>
+            <h1 class="" style="font-size: 2vw; padding: 2vw;">
+                {{ auth()->user()->total_coins }}
+            </h1>
         </div>
         <a href="#" style="padding-bottom:3vw;">
             <button style=" font-size: 1.6vw;"
