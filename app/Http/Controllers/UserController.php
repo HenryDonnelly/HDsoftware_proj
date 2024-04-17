@@ -57,19 +57,29 @@ class UserController extends Controller
         // Get the current user's total coins
         $currentTotalCoins = $user->total_coins;
 
-        // Get the coins from the current task
-        $taskCoins = $request->input('coins');
+        // Get the coins involved in the transaction (can be positive or negative)
+        $transactionCoins = $request->input('coins');
 
-        // Calculate the new total coins by adding the current total coins with the coins from the current task
-        $newTotalCoins = $currentTotalCoins + $taskCoins;
+        // Calculate the new total coins by adding the transaction coins to the current total coins
+        $newTotalCoins = $currentTotalCoins + $transactionCoins;
+
+        // Ensure that the total coins don't go negative
+        $newTotalCoins = max($newTotalCoins, 0);
 
         // Update the user's total coins
         $user->update([
             'total_coins' => $newTotalCoins,
         ]);
 
-        // Optionally, you can redirect back with a success message
-        return redirect()->back()->with('success', 'Total coins updated successfully.');
+        // Determine the message based on the transaction type
+        if ($transactionCoins >= 0) {
+            $message = 'Total coins updated successfully.';
+        } else {
+            $message = 'Coins spent successfully.';
+        }
+
+        // Redirect back with a success message
+        return redirect()->back()->with('success', $message);
     }
 
 

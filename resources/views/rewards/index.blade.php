@@ -29,6 +29,7 @@
                     </td>
                         <td>{{$reward->description}}</td>
                         <td><img src="{{ asset($reward->reward_image) }}" style="width: 300px;" /></img></td>
+                        <td><input id="coins" name="coins" type="hidden" value={{ -$reward->coins}} readonly></td>
                         <td> <x-primary-button class="mt-6">Claim Reward</x-primary-button></td>
                     </tr>
                 </form>

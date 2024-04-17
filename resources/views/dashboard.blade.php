@@ -32,7 +32,7 @@
                 {{ auth()->user()->total_coins }}
             </h1>
         </div>
-        <a href="#" style="padding-bottom:3vw;">
+        <a href="/tasks" style="padding-bottom:3vw;">
             <button style=" font-size: 1.6vw;"
                     class="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white">
                 Check out your tasks for the day
@@ -99,7 +99,7 @@
                     Sony has asked to volunteer to add their ps5 to the reedemable rewards!
                 </h4>
                 <p class="block mb-8 font-sans text-center" style="font-size: 1.2vw;">
-                    Sony has now become a reward, reedeembale for just for 90000 eco-coins! Be sure to spend your precious eco-coins quickly before stocks run out! T@C's apply, controller not included.
+                    Sony has now become a reward, redeemable for just for 90000 eco-coins! Be sure to spend your precious eco-coins quickly before stocks run out! T@C's apply, controller not included.
                 </p>
                 <div class="flex justify-center mt-2">
                     <a href="/rewards">
@@ -190,7 +190,7 @@
                     <a href="/rewards">
                         <button style=" font-size: 1.6vw;"
                             class="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4">
-                            Reedeem
+                            Redeem
                         </button>
                     </a>
                 </div>
